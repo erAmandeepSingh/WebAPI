@@ -11,9 +11,12 @@ namespace WebAPI
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Person
     {
+        [Key]
+
         public long ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
