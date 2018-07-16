@@ -89,7 +89,7 @@ namespace WebAPI.Controllers
         // DELETE: api/People/5
         [HttpDelete]
         [ResponseType(typeof(Person))]
-        public IHttpActionResult DeletePerson(long id)
+        public IHttpActionResult DeletePerson([FromUri] long id)
         {
             Person person = db.Person.Find(id);
             if (person == null)
